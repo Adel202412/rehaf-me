@@ -16,7 +16,7 @@
     </a>
 
     <nav class="menu">
-      <a href="#about">About</a>
+      <button class="menu__btn" type="button" data-open-about>About</button>
       <a href="#systems">Systems</a>
       <a href="#lab">Automation Lab</a>
       <a href="#notes">Notes</a>
@@ -120,5 +120,62 @@
       <div class="muted">REHAF.me is identity + method. REHAF.ae (later) is the offer.</div>
     </footer>
   </main>
+  <div class="modal" id="aboutModal" aria-hidden="true">
+  <div class="modal__backdrop" data-close-about></div>
+
+  <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="aboutTitle">
+    <div class="modal__header">
+      <h2 id="aboutTitle">About REHAF</h2>
+      <button class="modal__close" type="button" aria-label="Close" data-close-about>×</button>
+    </div>
+
+    <div class="modal__content">
+      <p><strong>REHAF is a process-first problem-solving framework.</strong> It exists to turn chaos into structure, reduce daily friction, and protect outcomes from human interference.</p>
+
+      <p>REHAF investigates before acting: observe → map the process → find breakpoints → surface root causes → enforce a safer workflow.</p>
+
+      <p><strong>REHAF refuses</strong> outcomes without authority, micromanagement, delayed decisions, cosmetic “looks good” work, and babysitting.</p>
+
+      <p class="muted">This is REHAF.me: method + systems + lab. (REHAF.ae will later be the business offer.)</p>
+    </div>
+
+    <div class="modal__footer">
+      <button class="btn btn--ghost" type="button" data-close-about>Close</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    const modal = document.getElementById('aboutModal');
+    const openBtn = document.querySelector('[data-open-about]');
+    const closeBtns = document.querySelectorAll('[data-close-about]');
+    let lastFocus = null;
+
+    function openModal() {
+      lastFocus = document.activeElement;
+      modal.classList.add('is-open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('no-scroll');
+      const focusTarget = modal.querySelector('.modal__close');
+      focusTarget && focusTarget.focus();
+    }
+
+    function closeModal() {
+      modal.classList.remove('is-open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('no-scroll');
+      lastFocus && lastFocus.focus();
+    }
+
+    openBtn && openBtn.addEventListener('click', openModal);
+    closeBtns.forEach(btn => btn.addEventListener('click', closeModal));
+
+    window.addEventListener('keydown', (e) => {
+      if (!modal.classList.contains('is-open')) return;
+      if (e.key === 'Escape') closeModal();
+    });
+  })();
+</script>
 </body>
 </html>

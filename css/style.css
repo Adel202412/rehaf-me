@@ -69,6 +69,7 @@ h1{
   line-height:1.05;
   letter-spacing:-0.2px;
   font-weight:800;
+  font-style: italic;
 }
 
 .kicker{color:#355a53;margin:0 0 10px;font-weight:700}
@@ -114,16 +115,18 @@ h1{
 /* ===== REST IS YOUR ORIGINAL v1 ===== */
 .cta{display:flex;gap:12px;margin:10px 0 20px}
 .btn{
-  background: linear-gradient(90deg, var(--c4), var(--c2));
-  color:#03110f;
+  background: linear-gradient(90deg, var(--c5), var(--bg));
+  color:var(--c4);/*#03110f;*/
   padding:12px 14px;
   border-radius:14px;
   font-weight:800;
   border:1px solid rgba(255,255,255,0.08);
 }
+.btn:hover{padding: 12%;} 
+
 .btn--ghost{
   background: transparent;
-  color: var(--text);
+  color: var(--bg);
   border:1px solid var(--border);
 }
 .btn--ghost:hover{background:rgba(255,255,255,0.06)}

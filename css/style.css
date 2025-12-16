@@ -135,7 +135,7 @@ h1{margin:0 0 12px; font-size:40px; line-height:1.05}
   .grid{grid-template-columns: 1fr}
   h1{font-size:34px}
 }
-
+/*
 @media (prefers-reduced-motion: reduce) {
   video.avatar {
     display: none;
@@ -144,6 +144,10 @@ h1{margin:0 0 12px; font-size:40px; line-height:1.05}
   video.avatar img {
     display: block;
   }
+}
+*/
+.avatar-fallback{
+  display:none;
 }
 
 .menu__btn{

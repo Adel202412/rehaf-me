@@ -1,4 +1,4 @@
-/*vwersin 1 - 16/12/2025*/
+/*vwersin 1 - 16/12/2025 - font changed */
 :root{
   --c1:#00786c;
   --c2:#2c863e;
@@ -16,7 +16,7 @@
 
 body{
   margin:0;
-  font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  font-family: "Source Sans 3", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   background:
     radial-gradient(1200px 600px at 20% 10%, rgba(0,171,154,0.22), transparent 60%),
     radial-gradient(900px 500px at 80% 20%, rgba(44,134,62,0.18), transparent 55%),
@@ -47,7 +47,7 @@ a{color:inherit;text-decoration:none}
 .hero--white{
   background:#ffffff;
   color:#0b1a17;
-  border-bottom:1px solid rgba(0,0,0,0.08);
+ border-bottom:1px solid rgba(0,0,0,0.08);
 }
 
 .hero__inner{
@@ -63,9 +63,25 @@ a{color:inherit;text-decoration:none}
   padding:0;
 }
 
+h1{
+  margin:0 0 12px;
+  font-size:40px;
+  line-height:1.05;
+  letter-spacing:-0.2px;
+  font-weight:800;
+}
+
 .kicker{color:#355a53;margin:0 0 10px;font-weight:700}
 .hero--white h1{color:#0b1a17}
 .hero--white .lead{color:#355a53}
+.hero--white .btn--ghost{
+  color:#0b1a17;
+  border:1px solid rgba(0,0,0,0.16);
+}
+.hero--white .btn--ghost:hover{
+  background: rgba(0,0,0,0.04);
+}
+
 
 .container{max-width:1100px;margin:0 auto;padding:28px 18px 60px}
 
@@ -81,8 +97,8 @@ a{color:inherit;text-decoration:none}
   width:100%;
   max-width:330px;
   border-radius:18px;
-  border:1px solid rgba(0,0,0,0.15);
-  background:#ffffff;
+  border:none ;/*1px solid rgba(0,0,0,0.15);*/
+  background:transparent;
 }
 
 .note{
@@ -120,11 +136,11 @@ a{color:inherit;text-decoration:none}
   border-radius:16px;
 }
 .card h3{margin:0 0 6px}
-.card p{margin:0;color:var(--muted);line-height:1.55}
+.card p{margin:0;color:var(--muted);line-height:1.65}
 
 .section{padding:34px 0 10px;border-top:1px solid rgba(255,255,255,0.08)}
 .section h2{margin:0 0 10px;font-size:24px}
-.section p{margin:0 0 10px;color:var(--muted);line-height:1.7}
+.section p{margin:0 0 10px;color:var(--muted);line-height:1.75}
 
 .list{margin:10px 0 0;padding-left:18px;color:var(--muted)}
 .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:10px}

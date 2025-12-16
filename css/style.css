@@ -146,9 +146,7 @@ h1{margin:0 0 12px; font-size:40px; line-height:1.05}
   }
 }
 */
-.avatar-fallback{
-  display:none;
-}
+.avatar-fallback{ display: none; }
 
 .menu__btn{
   appearance:none;

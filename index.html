@@ -12,12 +12,11 @@
   <header class="nav">
     <div class="nav__inner">
       <a class="brand" href="/">
-        <img src="assets/rehaf-logo.webp" class="brand__logo" alt="REHAF logo">
+        <img src="assets/rehaf-logo.webp" alt="REHAF" class="brand__logo" />
         <span class="brand__name">REHAF</span>
       </a>
 
       <nav class="menu">
-        <button class="menu__btn" type="button" data-open-about>About</button>
         <a href="#systems">Systems</a>
         <a href="#lab">Automation Lab</a>
         <a href="#notes">Notes</a>
@@ -25,193 +24,126 @@
     </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="hero__inner">
-        <div class="hero__copy">
-          <p class="kicker">Process-first. Tools-second. Outcomes protected.</p>
-          <h1>Turn chaos into structure — and structure into execution.</h1>
-          <p class="lead">
-            REHAF is built to diagnose workflow breakdowns, remove friction, and enforce follow-through.
-            Calm systems. Honest visibility. No babysitting.
-          </p>
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero" aria-label="REHAF hero section">
+      <div class="hero__left">
+        <p class="kicker">Process-first. Tools-second. Outcomes protected.</p>
+        <h1>Turn chaos into structure — and structure into execution.</h1>
 
-          <div class="cta">
-            <a class="btn" href="#systems">Read the method</a>
-            <a class="btn btn--ghost" href="#lab">Open the lab</a>
+        <p class="lead">
+          REHAF is built to diagnose workflow breakdowns, remove friction, and enforce follow-through.
+          No hype. No babysitting. No “looks good” work.
+        </p>
+
+        <div class="cta">
+          <a class="btn" href="#systems">Read the Method</a>
+          <a class="btn btn--ghost" href="#lab">Open the Lab</a>
+        </div>
+
+        <div class="principles">
+          <div class="card">
+            <h3>Structure</h3>
+            <p>Clear workflows. Clear steps. Zero ambiguity.</p>
           </div>
-
-          <div class="chips">
-            <span class="chip">Structure</span>
-            <span class="chip">Visibility</span>
-            <span class="chip">Enforcement</span>
+          <div class="card">
+            <h3>Visibility</h3>
+            <p>Signals, summaries, comparisons — not noise.</p>
+          </div>
+          <div class="card">
+            <h3>Enforcement</h3>
+            <p>Reminders, gates, follow-ups — work moves forward.</p>
           </div>
         </div>
 
-        <aside class="hero__side">
-          <div class="avatar-card">
-            <!-- Use VIDEO if present, otherwise keep only the <img> -->
-            <video class="avatar" autoplay muted loop playsinline preload="metadata">
-              <source src="assets/rehaf-avatar-video.webm" type="video/webm">
-              <img src="assets/rehaf-avatar.webp" alt="REHAF avatar" class="avatar-img">
-            </video>
-          </div>
-
-          <div class="rule">
-            <span class="rule__label">Rule</span>
-            <span class="rule__text">No outcome without control.</span>
-          </div>
-        </aside>
+        <div class="rule">
+          <span class="rule__label">Rule</span>
+          <span class="rule__text">No outcome without control.</span>
+        </div>
       </div>
+
+      <!-- THE ONLY WHITE AREA -->
+      <aside class="hero__right" aria-label="REHAF avatar panel">
+        <div class="avatar-panel">
+          <video class="avatar" autoplay muted loop playsinline preload="metadata">
+            <source src="assets/rehaf-avatar-video.webm" type="video/webm">
+            <img src="assets/rehaf-avatar.webp" alt="REHAF avatar" class="avatar-img">
+          </video>
+
+          <div class="avatar-panel__caption">
+            <div class="badge">REHAF</div>
+            <div class="caption-title">Solution maker. Pivot controller.</div>
+            <div class="caption-sub">Identity + method live here on REHAF.me</div>
+          </div>
+        </div>
+      </aside>
     </section>
 
+    <!-- SYSTEMS -->
     <section id="systems" class="section">
-      <div class="section__inner">
-        <div class="section__head">
-          <h2>Systems</h2>
-          <p class="section__sub">A simple method that survives human behavior.</p>
-        </div>
+      <h2>Systems</h2>
+      <p class="muted">
+        REHAF investigates first: observe → map → find breakpoints → surface causes → enforce a safer workflow.
+      </p>
+      <ul class="list">
+        <li><strong>Diagnosis:</strong> observe → map → find breaks → root cause.</li>
+        <li><strong>Design:</strong> simplify flow, remove ambiguity, define ownership.</li>
+        <li><strong>Enforce:</strong> rules + reminders + checkpoints so work doesn’t regress.</li>
+      </ul>
+    </section>
 
-        <div class="cards">
-          <article class="card">
-            <h3>Diagnose</h3>
-            <p>Observe the work, map the flow, find the breakpoints, and surface root causes before you touch tools.</p>
-          </article>
-          <article class="card">
-            <h3>Design</h3>
-            <p>Clarify ownership, remove ambiguity, simplify the handoffs, and define the minimum viable process.</p>
-          </article>
-          <article class="card">
-            <h3>Enforce</h3>
-            <p>Use gates, reminders, and checkpoints so execution doesn’t collapse under micromanagement or delay.</p>
-          </article>
-        </div>
+    <!-- LAB -->
+    <section id="lab" class="section">
+      <h2>Automation Lab</h2>
+      <p class="muted">Workable tools. Honest scope. Clear limits.</p>
+
+      <div class="grid">
+        <a class="tool" href="#">
+          <h3>CV Parser</h3>
+          <p>Extract structured data from CVs.</p>
+          <span class="tag">Workable</span>
+        </a>
+
+        <a class="tool" href="#">
+          <h3>Image → Text (OCR)</h3>
+          <p>Convert screenshots into clean text.</p>
+          <span class="tag">Workable</span>
+        </a>
+
+        <a class="tool" href="#">
+          <h3>Prompt Enhancer</h3>
+          <p>Turn raw intent into a usable prompt.</p>
+          <span class="tag">Workable</span>
+        </a>
+
+        <a class="tool" href="#">
+          <h3>Invoice Maker</h3>
+          <p>Simple invoice generator (free).</p>
+          <span class="tag tag--free">Free</span>
+        </a>
       </div>
     </section>
 
-    <section id="lab" class="section section--tint">
-      <div class="section__inner">
-        <div class="section__head">
-          <h2>Automation Lab</h2>
-          <p class="section__sub">Workable tools — honest scope, clear limits.</p>
-        </div>
-
-        <div class="tools">
-          <a class="tool" href="#" aria-label="CV Parser">
-            <div class="tool__top">
-              <h3>CV Parser</h3>
-              <span class="tag">Workable</span>
-            </div>
-            <p>Extract structured data from CVs to reduce manual screening.</p>
-          </a>
-
-          <a class="tool" href="#" aria-label="Image to Text OCR">
-            <div class="tool__top">
-              <h3>Image → Text (OCR)</h3>
-              <span class="tag">Workable</span>
-            </div>
-            <p>Turn screenshots into clean text for reuse, reporting, and workflows.</p>
-          </a>
-
-          <a class="tool" href="#" aria-label="Prompt Enhancer">
-            <div class="tool__top">
-              <h3>Prompt Enhancer</h3>
-              <span class="tag">Workable</span>
-            </div>
-            <p>Convert raw intent into structured prompts and clear task output.</p>
-          </a>
-
-          <a class="tool" href="#" aria-label="Invoice Maker">
-            <div class="tool__top">
-              <h3>Invoice Maker</h3>
-              <span class="tag tag--free">Free</span>
-            </div>
-            <p>Generate a simple invoice with consistent formatting and naming.</p>
-          </a>
-        </div>
-      </div>
-    </section>
-
+    <!-- NOTES -->
     <section id="notes" class="section">
-      <div class="section__inner">
-        <div class="section__head">
-          <h2>Notes</h2>
-          <p class="section__sub">Short writing: systems, mistakes, fixes, and what actually works.</p>
+      <h2>Notes</h2>
+      <p class="muted">Short writing: systems, mistakes, fixes, and what actually works.</p>
+      <div class="note-strip">
+        <div class="note-item">
+          <h3>Why processes break</h3>
+          <p>Micromanagement, delayed decisions, emotional overrides.</p>
         </div>
-
-        <div class="note-list">
-          <div class="note-item">
-            <h3>Why processes break</h3>
-            <p>Micromanagement, delayed decisions, and emotional overrides — the usual culprits.</p>
-          </div>
-          <div class="note-item">
-            <h3>Tools don’t save weak structure</h3>
-            <p>Automation amplifies whatever you already have — good or bad.</p>
-          </div>
+        <div class="note-item">
+          <h3>Tools don’t save weak structure</h3>
+          <p>Automation amplifies whatever you already have.</p>
         </div>
       </div>
     </section>
 
     <footer class="footer">
-      <div class="footer__inner">
-        <div class="footer__left">© REHAF</div>
-        <div class="footer__right">REHAF.me = identity + method. REHAF.ae = offer (later).</div>
-      </div>
+      <div>© REHAF</div>
+      <div class="muted">REHAF.me = identity + method. REHAF.ae = offer (later).</div>
     </footer>
   </main>
-
-  <!-- About Modal -->
-  <div class="modal" id="aboutModal" aria-hidden="true">
-    <div class="modal__backdrop" data-close-about></div>
-
-    <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="aboutTitle">
-      <div class="modal__header">
-        <h2 id="aboutTitle">About REHAF</h2>
-        <button class="modal__close" type="button" aria-label="Close" data-close-about>×</button>
-      </div>
-
-      <div class="modal__content">
-        <p><strong>REHAF exists to protect outcomes.</strong> Businesses fail at execution when decisions are delayed, processes are overridden, and accountability is unclear.</p>
-        <p>REHAF builds systems that survive human behavior: structure first, visibility second, tools last.</p>
-        <p><strong>Boundary:</strong> If REHAF is accountable for results, REHAF needs authority to enforce the process. No outcome without control.</p>
-      </div>
-
-      <div class="modal__footer">
-        <button class="btn btn--ghost" type="button" data-close-about>Close</button>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    (function () {
-      const modal = document.getElementById('aboutModal');
-      const openBtn = document.querySelector('[data-open-about]');
-      const closeBtns = document.querySelectorAll('[data-close-about]');
-      let lastFocus = null;
-
-      function openModal() {
-        lastFocus = document.activeElement;
-        modal.classList.add('is-open');
-        modal.setAttribute('aria-hidden', 'false');
-        document.body.classList.add('no-scroll');
-        const focusTarget = modal.querySelector('.modal__close');
-        focusTarget && focusTarget.focus();
-      }
-
-      function closeModal() {
-        modal.classList.remove('is-open');
-        modal.setAttribute('aria-hidden', 'true');
-        document.body.classList.remove('no-scroll');
-        lastFocus && lastFocus.focus();
-      }
-
-      openBtn && openBtn.addEventListener('click', openModal);
-      closeBtns.forEach(btn => btn.addEventListener('click', closeModal));
-      window.addEventListener('keydown', (e) => {
-        if (!modal.classList.contains('is-open')) return;
-        if (e.key === 'Escape') closeModal();
-      });
-    })();
-  </script>
 </body>
 </html>

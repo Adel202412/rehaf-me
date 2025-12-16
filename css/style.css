@@ -1,4 +1,4 @@
-/*vwersin 1 - 16/12/2025 - font changed */
+/*version 1.2 - 16/12/2025 - logo bug fixed */
 :root{
   --c1:#00786c;
   --c2:#2c863e;
@@ -53,9 +53,6 @@ a{color:inherit;text-decoration:none}
   max-height:40px;
   width:auto;
   object-fit:contain;
-  box-shadow: #00ab9a;
-  border-radius: 3px;
-  border-color: var(--muted);
   }
 
 @media (max-width:640px){

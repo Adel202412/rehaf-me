@@ -74,9 +74,9 @@ h1{margin:0 0 12px; font-size:40px; line-height:1.05}
 .avatar{
   width:100%;
   max-width:330px;
-  border-radius:18px;
-  border:1px solid var(--border);
-  background: rgba(255,255,255,0.03);
+  border-radius:none;
+  border:none;
+  background:transparent;
 }
 .note{
   width:100%;

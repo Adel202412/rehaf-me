@@ -18,21 +18,34 @@
 
 <body class="is-ar">
 
-  <!-- NAV -->
-  <header class="nav">
-    <a class="brand" href="/ar/">
-      <img src="/assets/rehaf-logo.webp" alt="REHAF" class="brand__logo" />
-    </a>
+<!-- NAV -->
+<header class="nav">
+  <a class="brand" href="/ar/">
+    <img src="/assets/rehaf-logo.webp" alt="REHAF" class="brand__logo" />
+  </a>
 
-    <nav class="menu">
-      <a href="#about">ليش REHAF؟</a>
-      <a href="#systems">الطريقة</a>
-      <a href="#lab">المختبر</a>
-      <a href="#notes">ملاحظات</a>
-      <!-- Language switch -->
-      <a class="langBtn" href="/" aria-label="Switch to English">EN</a>
-    </nav>
-  </header>
+  <!-- Desktop menu -->
+  <nav class="menu menu--desktop" aria-label="Primary">
+    <a href="#about">ليش REHAF؟</a>
+    <a href="#systems">الطريقة</a>
+    <a href="#lab">المختبر</a>
+    <a href="#notes">ملاحظات</a>
+  </nav>
+
+  <!-- Left actions in AR (we control via CSS) -->
+  <div class="nav__actions">
+    <a class="langBtn" href="/" aria-label="Switch to English">EN</a>
+    <button class="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">☰</button>
+  </div>
+
+  <!-- Mobile dropdown menu -->
+  <nav class="menu menu--mobile" id="mobileMenu" aria-label="Mobile menu" hidden>
+    <a href="#about">ليش REHAF؟</a>
+    <a href="#systems">الطريقة</a>
+    <a href="#lab">المختبر</a>
+    <a href="#notes">ملاحظات</a>
+  </nav>
+</header>
 
   <!-- WHITE HERO (full width) -->
   <section class="hero hero--white">
@@ -148,7 +161,6 @@
     </footer>
 
   </main>
-
+<script src="js/main.js" defer></script>
 </body>
 </html>
-```0

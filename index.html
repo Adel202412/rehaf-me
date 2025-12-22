@@ -18,23 +18,36 @@
 
 <body>
 
-  <!-- NAV (unchanged) -->
-  <header class="nav">
-    <a class="brand" href="/">
-      <img src="assets/rehaf-logo.webp" alt="REHAF" class="brand__logo" />
-      <!--span class="brand__name">REHAF</span-->
-    </a>
+<!-- NAV BLOCK -->
+<header class="nav">
+  <a class="brand" href="/">
+    <img src="assets/rehaf-logo.webp" alt="REHAF" class="brand__logo" />
+  </a>
 
-    <nav class="menu">
-      <a href="#about">About</a>
-      <a href="#systems">Systems</a>
-      <a href="#lab">Automation Lab</a>
-      <a href="#notes">Notes</a>
-      <a class="langBtn" href="/ar/" aria-label="Switch to Arabic">AR</a>
-    </nav>
-  </header>
+  <!-- Desktop menu -->
+  <nav class="menu menu--desktop" aria-label="Primary">
+    <a href="#about">About</a>
+    <a href="#systems">Systems</a>
+    <a href="#lab">Automation Lab</a>
+    <a href="#notes">Notes</a>
+  </nav>
 
-  <!-- WHITE HERO (NEW, full width) -->
+  <!-- Right actions -->
+  <div class="nav__actions">
+    <a class="langBtn" href="/ar/" aria-label="Switch to Arabic">AR</a>
+    <button class="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">☰</button>
+  </div>
+
+  <!-- Mobile dropdown menu -->
+  <nav class="menu menu--mobile" id="mobileMenu" aria-label="Mobile menu" hidden>
+    <a href="#about">About</a>
+    <a href="#systems">Systems</a>
+    <a href="#lab">Automation Lab</a>
+    <a href="#notes">Notes</a>
+  </nav>
+</header>
+
+<!-- WHITE HERO (NEW, full width) -->
   <section class="hero hero--white">
     <div class="hero__inner">
 
@@ -146,6 +159,6 @@
       <div class="muted">REHAF.me is identity + method. </div>
     </footer>
   </main>
-
+<script src="js/main.js" defer></script>
 </body>
 </html>

@@ -303,3 +303,56 @@ html[lang="ar"] .langBtn{
   margin-left: 0;
   margin-right: auto;
 }
+
+/* ===== NAV actions + responsive menus (FIX) ===== */
+.nav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+}
+
+/* Right-side actions container */
+.nav__actions{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex:0 0 auto;
+}
+
+/* Make brand not shrink weirdly */
+.brand{ flex:0 0 auto; }
+
+/* Desktop menu takes remaining space and can wrap */
+.menu--desktop{
+  flex:1 1 auto;
+  display:flex;
+  flex-wrap:wrap;
+  gap:16px;
+  justify-content:center;
+}
+
+/* Mobile menu styles */
+.menu--mobile{
+  width:100%;
+  margin-top:8px;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+/* Mobile breakpoint behavior */
+@media (max-width:640px){
+  .menu--desktop{ display:none; }
+  .menuBtn{ display:inline-flex; }
+}
+
+/* Desktop: hide ☰ */
+@media (min-width:641px){
+  .menuBtn{ display:none; }
+}
+
+/* AR layout: reverse order so actions appear on the left side visually */
+html[lang="ar"] .nav{
+  flex-direction:row-reverse;
+}

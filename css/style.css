@@ -1,4 +1,6 @@
-/*version 1.3 - 18/12/2025 - arabic page added and arabic button added */
+/* css/style.css */
+/* version 1.4 - 22/12/2025 - Mobile menu + AR button + no duplicate menu */
+
 :root{
   --c1:#00786c;
   --c2:#2c863e;
@@ -26,26 +28,27 @@ body{
 
 a{color:inherit;text-decoration:none}
 
-/* ===== NAV (unchanged) ===== */
+/* ===== NAV ===== */
 .nav{
-  position:sticky; top:0; min-height: 64px;
+  position:sticky;
+  top:0;
+  min-height:64px;
   backdrop-filter: blur(10px);
   background: rgba(11,15,14,0.65);
   border-bottom:1px solid var(--border);
-  display:flex; align-items:center; justify-content:space-between;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
   padding:14px 18px;
-}
-@media (max-width:640px){
-  .nav{
-    min-height:56px;
-    padding:10px 14px;
-  }
+  flex-wrap:wrap;
+  gap:12px;
 }
 
 .brand{
   display:flex;
   align-items:center;
   gap:8px;
+  flex:0 0 auto;
 }
 
 .brand__logo{
@@ -53,205 +56,76 @@ a{color:inherit;text-decoration:none}
   max-height:40px;
   width:auto;
   object-fit:contain;
-  }
-
-@media (max-width:640px){
-  .brand__logo{
-    max-height:24px;
-  }
-}
-.brand__name{font-weight:800;letter-spacing:0.3px}
-.menu{display:flex;gap:16px;font-weight:600;color:var(--muted)}
-.menu a{padding:8px 10px;border-radius:10px}
-.menu a:hover{background:rgba(255,255,255,0.06);color:var(--text)}
-
-/* ===== WHITE HERO (NEW) ===== */
-.hero--white{
-  background:#ffffff;
-  color:#0b1a17;
- border-bottom:1px solid rgba(0,0,0,0.08);
 }
 
-.hero__inner{
-  max-width:1100px;
-  margin:0 auto;
-  padding:36px 18px 20px;
-  display:grid;
-  grid-template-columns:1.6fr 1fr;
-  gap:26px;
-}
-
-.hero{
-  padding:0;
-}
-
-h1{
-  margin:0 0 12px;
-  font-size:40px;
-  line-height:1.05;
-  letter-spacing:-0.2px;
-  font-weight:800;
-  font-style: italic;
-}
-
-.kicker{color:#355a53;margin:0 0 10px;font-weight:700}
-.hero--white h1{color:#0b1a17}
-.hero--white .lead{color:#355a53}
-.hero--white .btn--ghost{
-  color:#0b1a17;
-  border:1px solid rgba(0,0,0,0.16);
-}
-.hero--white .btn--ghost:hover{
-  background: rgba(0,0,0,0.04);
-}
-
-
-.container{max-width:1100px;margin:0 auto;padding:28px 18px 60px}
-
-/* ===== HERO CONTENT (same as v1) ===== */
-.hero__right{
+.nav__actions{
   display:flex;
-  flex-direction:column;
-  gap:12px;
-  align-items:flex-end;
+  align-items:center;
+  gap:10px;
+  flex:0 0 auto;
 }
 
-.avatar{
-  width:100%;
-  max-width:330px;
-  border-radius:18px;
-  border:none ;/*1px solid rgba(0,0,0,0.15);*/
-  background:transparent;
-}
-
-.note{
-  width:100%;
-  max-width:330px;
-  padding:12px 14px;
-  border-radius:16px;
-  border:1px solid rgba(0,120,108,0.25);
-  background: rgba(0,120,108,0.12);
-  color:#355a53;
-  text-align: center;
-}
-
-/* ===== REST IS YOUR ORIGINAL v1 ===== */
-.cta{display:flex;gap:12px;margin:10px 0 20px}
-.btn{
-  background: linear-gradient(90deg, var(--c5), var(--bg));
-  color:var(--muted);/*#03110f;*/
-  padding:12px 14px;
-  border-radius:14px;
-  font-weight:800;
-  border:1px solid rgba(255,255,255,0.08);
-transition: transform 0.2s ease-in-out;
-}
-.btn:hover{transform: scale(1.1);} 
-
-.btn--ghost{
-  background: transparent;
-  color: var(--bg);
-  border:1px solid var(--border);
-  transition: transform 0.2s ease-in-out, background 0.2s ease;
-}
-.btn--ghost:hover{background:rgba(255,255,255,0.06); transform:scale(1.2);}
-
-.principles{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
-.card{
-  padding:14px;
-  border:1px solid var(--border);
-  background: var(--card);
-  border-radius:16px;
-}
-.card h3{margin:0 0 6px}
-.card p{margin:0;color:var(--c5);line-height:1.65}
-
-.section{padding:34px 0 10px;border-top:1px solid rgba(255,255,255,0.08)}
-.section h2{margin:0 0 10px;font-size:24px}
-.section p{margin:0 0 10px;color:var(--muted);line-height:1.75}
-
-.list{margin:10px 0 0;padding-left:18px;color:var(--muted)}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:10px}
-
-.tool{
-  display:block;
-  padding:14px;
-  border-radius:16px;
-  border:1px solid var(--border);
-  background: var(--card);
-}
-.tool:hover{background:rgba(255, 255, 255, 0.14)}
-
-.footer{
-  margin-top:34px;
-  padding-top:18px;
-  border-top:1px solid rgba(255,255,255,0.08);
+/* Desktop menu */
+.menu--desktop{
   display:flex;
-  justify-content:space-between;
-  gap:14px;
+  gap:16px;
+  font-weight:600;
   color:var(--muted);
+  flex:1 1 auto;
+  justify-content:center;
+  flex-wrap:wrap;
 }
 
-.muted{color:var(--muted)}
-
-@media (max-width:860px){
-  .hero__inner{grid-template-columns:1fr}
-  .principles{grid-template-columns:1fr}
-  .grid{grid-template-columns:1fr}
-  h1{font-size:34px}
+.menu--desktop a{
+  padding:8px 10px;
+  border-radius:10px;
 }
 
-/* =========================
-   AR overrides (rehaf.me/ar)
-   ========================= */
-
-.is-ar{
-  font-family: "Zain", sans-serif;
-  line-height: 1.9;
+.menu--desktop a:hover{
+  background:rgba(255,255,255,0.06);
+  color:var(--text);
 }
 
-/* RTL direction + text alignment */
-html[lang="ar"] body{
-  direction: rtl;
-  text-align: right;
+/* Mobile dropdown */
+.menu--mobile{
+  display:none;           /* JS will set flex when open */
+  flex-direction:column;
+  gap:8px;
+  width:100%;
+  padding:12px 0;
+  border-top:1px solid var(--border);
 }
 
-/* Nav: keep logo on the right, menu centered, EN button on the left */
-html[lang="ar"] .nav{
-  flex-direction: row-reverse;
+.menu--mobile a{
+  padding:10px 14px;
+  border-radius:10px;
+  color:var(--muted);
+  font-weight:600;
 }
 
-/* Menu spacing in Arabic */
-html[lang="ar"] .menu{
-  flex-direction: row;
-  gap: 12px;
+.menu--mobile a:hover{
+  background:rgba(255,255,255,0.06);
+  color:var(--text);
 }
 
-/* Arabic headings rhythm */
-html[lang="ar"] h1{
-  letter-spacing: 0;
-  font-style: normal;       /* Arabic doesn't need italic */
-  line-height: 1.25;
+/* Menu button */
+.menuBtn{
+  display:none; /* shown on <=860px */
+  align-items:center;
+  justify-content:center;
+  padding:8px 12px;
+  border:1px solid var(--border);
+  background: rgba(255,255,255,0.06);
+  border-radius:10px;
+  color:var(--text);
+  font-size:18px;
+  cursor:pointer;
+  font-weight:700;
 }
 
-/* Lead text readability */
-html[lang="ar"] .lead{
-  line-height: 2.0;
-}
+.menuBtn:hover{ background: rgba(255,255,255,0.10); }
 
-/* Lists look better in RTL */
-html[lang="ar"] .list{
-  padding-right: 18px;
-  padding-left: 0;
-}
-
-/* Buttons: keep same style, just ensure text feels balanced */
-html[lang="ar"] .btn,
-html[lang="ar"] .btn--ghost{
-  letter-spacing: 0;
-}
-
-/* Language button (add once, works for both pages) */
+/* Language button */
 .langBtn{
   display:inline-flex;
   align-items:center;
@@ -264,142 +138,170 @@ html[lang="ar"] .btn--ghost{
   font-weight:800;
   line-height:1;
 }
-.langBtn:hover{background:rgba(255,255,255,0.10)}
-/* On white hero/nav area, make it dark */
+
+.langBtn:hover{ background:rgba(255,255,255,0.10); }
+
+/* ===== Responsive ===== */
+@media (max-width:860px){
+  .nav{ min-height:56px; padding:10px 14px; }
+  .brand__logo{ max-height:24px; }
+
+  .menu--desktop{ display:none !important; }
+  .menuBtn{ display:inline-flex !important; }
+}
+
+/* ===== WHITE HERO ===== */
+.hero--white{
+  background:#ffffff;
+  color:#0b1a17;
+  border-bottom:1px solid rgba(0,0,0,0.08);
+}
+
+.hero{ padding:0; }
+
+.hero__inner{
+  max-width:1100px;
+  margin:0 auto;
+  padding:36px 18px 20px;
+  display:grid;
+  grid-template-columns:1.6fr 1fr;
+  gap:26px;
+}
+
+h1{
+  margin:0 0 12px;
+  font-size:40px;
+  line-height:1.05;
+  letter-spacing:-0.2px;
+  font-weight:800;
+  font-style:italic;
+}
+
+.kicker{ color:#355a53; margin:0 0 10px; font-weight:700; }
+.hero--white h1{ color:#0b1a17; }
+.hero--white .lead{ color:#355a53; }
+
+.hero--white .btn--ghost{
+  color:#0b1a17;
+  border:1px solid rgba(0,0,0,0.16);
+}
+.hero--white .btn--ghost:hover{ background: rgba(0,0,0,0.04); }
+
 .hero--white .langBtn{
   border:1px solid rgba(0,0,0,0.16);
   background: rgba(0,0,0,0.03);
   color:#0b1a17;
 }
-.hero--white .langBtn:hover{background: rgba(0,0,0,0.06)}
+.hero--white .langBtn:hover{ background: rgba(0,0,0,0.06); }
 
-/* Mobile: nav stacks cleanly */
-@media (max-width: 640px){
-  html[lang="ar"] .nav{
-    gap: 10px;
-  }
-  html[lang="ar"] .menu{
-    flex-wrap: wrap;
-    justify-content: flex-start;
-  }
-}
-/* ===== Fix lang button overflow (no absolute) ===== */
-.nav{
-  flex-wrap: wrap;
-  gap: 12px;
-}
+.container{ max-width:1100px; margin:0 auto; padding:28px 18px 60px; }
 
-.menu{
-  flex-wrap: wrap;
-}
-
-/* EN page: push AR to the far right */
-html:not([lang="ar"]) .langBtn{
-  margin-left: auto;
-}
-
-/* AR page: push EN to the far left */
-html[lang="ar"] .langBtn{
-  margin-left: 0;
-  margin-right: auto;
-}
-
-/* ===== NAV actions + responsive menus (FIX) ===== */
-.nav{
+.hero__right{
   display:flex;
-  align-items:center;
-  justify-content:space-between;
+  flex-direction:column;
   gap:12px;
+  align-items:flex-end;
 }
 
-/* Right-side actions container */
-.nav__actions{
+.avatar{
+  width:100%;
+  max-width:330px;
+  border-radius:18px;
+  border:none;
+  background:transparent;
+}
+
+.note{
+  width:100%;
+  max-width:330px;
+  padding:12px 14px;
+  border-radius:16px;
+  border:1px solid rgba(0,120,108,0.25);
+  background: rgba(0,120,108,0.12);
+  color:#355a53;
+  text-align:center;
+}
+
+/* Buttons */
+.cta{ display:flex; gap:12px; margin:10px 0 20px; }
+
+.btn{
+  background: linear-gradient(90deg, var(--c5), var(--bg));
+  color:var(--muted);
+  padding:12px 14px;
+  border-radius:14px;
+  font-weight:800;
+  border:1px solid rgba(255,255,255,0.08);
+  transition: transform 0.2s ease-in-out;
+}
+.btn:hover{ transform: scale(1.1); }
+
+.btn--ghost{
+  background: transparent;
+  color: var(--bg);
+  border:1px solid var(--border);
+  transition: transform 0.2s ease-in-out, background 0.2s ease;
+}
+.btn--ghost:hover{ background:rgba(255,255,255,0.06); transform:scale(1.2); }
+
+/* Cards */
+.principles{ display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:10px; }
+
+.card{
+  padding:14px;
+  border:1px solid var(--border);
+  background: var(--card);
+  border-radius:16px;
+}
+
+.card h3{ margin:0 0 6px; }
+.card p{ margin:0; color:var(--c5); line-height:1.65; }
+
+/* Sections */
+.section{ padding:34px 0 10px; border-top:1px solid rgba(255,255,255,0.08); }
+.section h2{ margin:0 0 10px; font-size:24px; }
+.section p{ margin:0 0 10px; color:var(--muted); line-height:1.75; }
+
+.list{ margin:10px 0 0; padding-left:18px; color:var(--muted); }
+
+.grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin-top:10px; }
+
+.tool{
+  display:block;
+  padding:14px;
+  border-radius:16px;
+  border:1px solid var(--border);
+  background: var(--card);
+}
+.tool:hover{ background:rgba(255, 255, 255, 0.14); }
+
+/* Footer */
+.footer{
+  margin-top:34px;
+  padding-top:18px;
+  border-top:1px solid rgba(255,255,255,0.08);
   display:flex;
-  align-items:center;
-  gap:10px;
-  flex:0 0 auto;
+  justify-content:space-between;
+  gap:14px;
+  color:var(--muted);
 }
 
-/* Make brand not shrink weirdly */
-.brand{ flex:0 0 auto; }
+.muted{ color:var(--muted); }
 
-/* ===== RESPONSIVE MENU - COMPLETE FIX ===== */
-
-/* Hide mobile elements by default */
-.menu--mobile {
-  display: none;
-  flex-direction: column;
-  gap: 8px;
-  width: 100%;
-  margin-top: 12px;
-  padding: 12px 0;
-  border-top: 1px solid var(--border);
+/* Mobile content layout */
+@media (max-width:860px){
+  .hero__inner{ grid-template-columns:1fr; }
+  .principles{ grid-template-columns:1fr; }
+  .grid{ grid-template-columns:1fr; }
+  h1{ font-size:34px; }
 }
 
-.menuBtn {
-  display: none;
-  align-items: center;
-  justify-content: center;
-  padding: 8px 12px;
-  border: 1px solid var(--border);
-  background: rgba(255, 255, 255, 0.06);
-  border-radius: 10px;
-  color: var(--text);
-  font-size: 18px;
-  cursor: pointer;
-  font-weight: 700;
-}
+/* ===== AR overrides (works when html lang="ar") ===== */
+.is-ar{ font-family:"Zain", sans-serif; line-height:1.9; }
 
-.menuBtn:hover {
-  background: rgba(255, 255, 255, 0.10);
-}
-
-/* Desktop: Show only desktop menu */
-@media (min-width: 861px) {
-  .menu--desktop {
-    display: flex !important;
-  }
-  .menu--mobile {
-    display: none !important;
-  }
-  .menuBtn {
-    display: none !important;
-  }
-}
-
-/* Mobile/Tablet: Hide desktop, enable mobile toggle */
-@media (max-width: 860px) {
-  .menu--desktop {
-    display: none !important;
-  }
-  
-  .menuBtn {
-    display: inline-flex !important;
-  }
-  
-  /* Mobile menu shown when JS toggles display:flex */
-  .menu--mobile {
-    width: 100%;
-  }
-  
-  .menu--mobile a {
-    padding: 10px 14px;
-    border-radius: 10px;
-    color: var(--muted);
-    font-weight: 600;
-  }
-  
-  .menu--mobile a:hover {
-    background: rgba(255, 255, 255, 0.06);
-    color: var(--text);
-  }
-}
-
-/* AR layout */
-html[lang="ar"] .nav {
-  flex-direction: row-reverse;
-}
-
-html[lang="ar"] .menu--mobile {
-  text-align: right;
-}
+html[lang="ar"] body{ direction:rtl; text-align:right; }
+html[lang="ar"] .nav{ flex-direction:row-reverse; }
+html[lang="ar"] .menu--mobile{ text-align:right; }
+html[lang="ar"] h1{ letter-spacing:0; font-style:normal; line-height:1.25; }
+html[lang="ar"] .lead{ line-height:2.0; }
+html[lang="ar"] .list{ padding-right:18px; padding-left:0; }

@@ -1,56 +1,51 @@
-<!--Versin 1.3 - 18/12/2025 - arabic language button added-->
+<!-- version 1.4 - 22/12/2025 - Mobile menu + AR button + no duplicate menu -->
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-
   <title>REHAF — Systems, Automation, Execution</title>
-  <meta name="description" content="REHAF is a system for turning chaos into structure — process first, tools second, outcomes protected." />
 
-  <!-- Source Sans 3 (Bold + Italic support) -->
   <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&display=swap">
-
-  <!-- Your main CSS -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
 
-<!-- NAV BLOCK -->
-<header class="nav">
-  <a class="brand" href="/">
-    <img src="assets/rehaf-logo.webp" alt="REHAF" class="brand__logo" />
-  </a>
+  <!-- NAV BLOCK -->
+  <header class="nav">
+    <a class="brand" href="/">
+      <img src="assets/rehaf-logo.webp" alt="REHAF" class="brand__logo" />
+    </a>
 
-  <!-- Desktop menu -->
-  <nav class="menu menu--desktop" aria-label="Primary">
-    <a href="#about">About</a>
-    <a href="#systems">Systems</a>
-    <a href="#lab">Automation Lab</a>
-    <a href="#notes">Notes</a>
-  </nav>
+    <!-- Desktop menu -->
+    <nav class="menu menu--desktop" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#systems">Systems</a>
+      <a href="#lab">Automation Lab</a>
+      <a href="#notes">Notes</a>
+    </nav>
 
-  <!-- Right actions -->
-  <div class="nav__actions">
-    <a class="langBtn" href="/ar/" aria-label="Switch to Arabic">AR</a>
-    <button class="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">☰</button>
-  </div>
+    <!-- Right actions -->
+    <div class="nav__actions">
+      <a class="langBtn" href="/ar/" aria-label="Switch to Arabic">AR</a>
+      <button class="menuBtn" type="button"
+              aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">☰</button>
+    </div>
 
-  <!-- Mobile dropdown menu -->
-  <nav class="menu menu--mobile" id="mobileMenu" aria-label="Mobile menu">
-    <a href="#about">About</a>
-    <a href="#systems">Systems</a>
-    <a href="#lab">Automation Lab</a>
-    <a href="#notes">Notes</a>
-  </nav>
-</header>
+    <!-- Mobile dropdown menu -->
+    <nav class="menu menu--mobile" id="mobileMenu" aria-label="Mobile menu">
+      <a href="#about">About</a>
+      <a href="#systems">Systems</a>
+      <a href="#lab">Automation Lab</a>
+      <a href="#notes">Notes</a>
+    </nav>
+  </header>
 
-<!-- WHITE HERO (NEW, full width) -->
+  <!-- WHITE HERO -->
   <section class="hero hero--white">
     <div class="hero__inner">
-
       <div class="hero__left">
         <p class="kicker">Process-first. Tools-second. Outcomes protected.</p>
         <h1><strong><em>REHAF turns chaos into structure and structure into execution.</em></strong></h1>
@@ -91,24 +86,20 @@
           <strong><em>Rule:</em></strong><em> No outcome without control.</em>
         </div>
       </div>
-
     </div>
   </section>
 
-  <!-- DARK CONTENT (UNCHANGED v1) -->
+  <!-- DARK CONTENT -->
   <main class="container">
-
     <section id="about" class="section">
       <h2>About</h2>
       <p>
-        REHAF exists because businesses repeatedly break their own process — often unintentionally: : micromanagement, delayed decisions,
-        emotional overrides,delayed decisions, teams improvise, and “quick fixes” bypass the system. Memory replaces documentation. Control gets traded for comfort.
+        REHAF exists because businesses repeatedly break their own process — often unintentionally: micromanagement, delayed decisions,
+        emotional overrides, teams improvise, and “quick fixes” bypass the system. Memory replaces documentation. Control gets traded for comfort.
         <br>
         REHAF is built to investigate first, then install clarity, responsibility, and follow-through — so outcomes don’t depend on mood.
-        </p>
-      <p>
-        REHAF investigates first, then builds workflows that survive human behavior.
       </p>
+      <p>REHAF investigates first, then builds workflows that survive human behavior.</p>
     </section>
 
     <section id="systems" class="section">
@@ -149,16 +140,16 @@
 
     <section id="notes" class="section">
       <h2>Notes</h2>
-      <p>Short, honest writing about why work breaks — and what actually restores control.
-          Tools show up here as examples, not as the point.</p>
+      <p>Short, honest writing about why work breaks — and what actually restores control. Tools show up here as examples, not as the point.</p>
       <div class="muted">Blog comes here (later we can do Markdown).</div>
     </section>
 
     <footer class="footer">
       <div>© REHAF</div>
-      <div class="muted">REHAF.me is identity + method. </div>
+      <div class="muted">REHAF.me is identity + method.</div>
     </footer>
   </main>
-<script src="js/main.js" defer></script>
+
+  <script src="js/main.js"></script>
 </body>
 </html>

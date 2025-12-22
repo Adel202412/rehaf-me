@@ -323,48 +323,63 @@ html[lang="ar"] .langBtn{
 /* Make brand not shrink weirdly */
 .brand{ flex:0 0 auto; }
 
-/* ===== RESPONSIVE MENU FIX ===== */
+/* ===== RESPONSIVE MENU - COMPLETE FIX ===== */
 
-/* Base: Hide mobile menu and button by default */
-.menu--mobile,
-.menuBtn {
+/* Hide mobile elements by default */
+.menu--mobile {
   display: none;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  margin-top: 12px;
+  padding: 12px 0;
+  border-top: 1px solid var(--border);
 }
 
-/* Desktop: Show desktop menu */
+.menuBtn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  color: var(--text);
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.menuBtn:hover {
+  background: rgba(255, 255, 255, 0.10);
+}
+
+/* Desktop: Show only desktop menu */
 @media (min-width: 861px) {
   .menu--desktop {
-    display: flex;
+    display: flex !important;
+  }
+  .menu--mobile {
+    display: none !important;
+  }
+  .menuBtn {
+    display: none !important;
   }
 }
 
-/* Mobile: Hide desktop, show mobile menu button and dropdown */
+/* Mobile/Tablet: Hide desktop, enable mobile toggle */
 @media (max-width: 860px) {
   .menu--desktop {
     display: none !important;
   }
   
   .menuBtn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 8px 12px;
-    border: 1px solid var(--border);
-    background: rgba(255, 255, 255, 0.06);
-    border-radius: 10px;
-    color: var(--text);
-    font-size: 18px;
-    cursor: pointer;
+    display: inline-flex !important;
   }
   
+  /* Mobile menu shown when JS toggles display:flex */
   .menu--mobile {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
     width: 100%;
-    margin-top: 12px;
-    padding: 12px 0;
-    border-top: 1px solid var(--border);
   }
   
   .menu--mobile a {
@@ -380,7 +395,7 @@ html[lang="ar"] .langBtn{
   }
 }
 
-/* AR layout adjustments */
+/* AR layout */
 html[lang="ar"] .nav {
   flex-direction: row-reverse;
 }

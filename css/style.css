@@ -356,3 +356,24 @@ html[lang="ar"] .langBtn{
 html[lang="ar"] .nav{
   flex-direction:row-reverse;
 }
+/* Hide mobile stuff on desktop */
+.menu--mobile,
+.menuBtn {
+  display: none;
+}
+
+/* Mobile behavior */
+@media (max-width: 860px) {
+  .menu--desktop {
+    display: none;
+  }
+  .menuBtn {
+    display: inline-flex;
+  }
+  .menu--mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+  }
+}

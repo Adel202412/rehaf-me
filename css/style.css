@@ -283,3 +283,36 @@ html[lang="ar"] .btn--ghost{
     justify-content: flex-start;
   }
 }
+/* ===== Language button placement ===== */
+.nav{
+  position: relative;
+}
+
+/* English: AR button on the right */
+html:not([lang="ar"]) .langBtn{
+  position: absolute;
+  right: 16px;
+  left: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+}
+
+/* Arabic: EN button on the left */
+html[lang="ar"] .langBtn{
+  position: absolute;
+  left: 16px;
+  right: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+}
+
+/* Mobile safety */
+@media (max-width: 640px){
+  html:not([lang="ar"]) .langBtn,
+  html[lang="ar"] .langBtn{
+    top: 14px;
+    transform: none;
+  }
+}
